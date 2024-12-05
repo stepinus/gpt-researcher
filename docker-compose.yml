@@ -9,7 +9,7 @@ services:
       LANGCHAIN_API_KEY: ${LANGCHAIN_API_KEY}
     restart: always
     ports:
-      - 8000:8000
+      - "8000"
   gptr-nextjs:
     pull_policy: build
     image: gptresearcher/gptr-nextjs
@@ -24,7 +24,7 @@ services:
       - ./frontend/nextjs:/app
     restart: always
     ports:
-      - 3000:3000
+      - "3000"
 
   gpt-researcher-tests:
     image: gptresearcher/gpt-researcher-tests
